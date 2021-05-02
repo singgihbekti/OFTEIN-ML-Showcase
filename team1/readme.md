@@ -14,6 +14,7 @@ Purpose:
 
 ## 1st Step: Import Library
 The first result was trained by 12 months ( 1st January - 31 December) 2020 infected person information.
+
 ```
 import requests
 import pandas as pd
@@ -43,20 +44,20 @@ ps
 ```
 ![alt text](pictures/2.table.PNG)
 
-##3rd Step: Testing Plot Number of passengers by Flight from Feb-Dec 2020
+## 3rd Step: Testing Plot Number of passengers by Flight from Feb-Dec 2020 
 
 Try to get data from API and analyse total number of passenger every month then plotting the graph
 
 ![alt text](pictures/3.graph.PNG)
 
-##4th Step: K-Mean
+## 4th Step: K-Mean 
 
 Now, we want to use K-Means to see the data generally. 
 Prepare data set X : Operating Period and Y : Number of Passengers of all Airline in July 2019 until December 2020. 
 
 ![alt text](pictures/4.kmean.PNG)
 
-##5th Step: Saving Output
+## 5th Step: Saving Output 
 
 Now, we want to write CSV output file from what we have done.
 Since our data is the panda dataframe, we can use to_cvs to convert output to csv.
@@ -69,10 +70,11 @@ all_pd_data.to_csv('output.zip', index=False, compression = compression_opts)
 
 
 Previously we show the data using K-Means for making us easy to understand the data. We can not see all the data one by one, but using clustering method, we can cluster the data then we can see it clearly. It is essential for helping us to decide what to do.
-##Color Segmentation Using K-Means
+## Color Segmentation Using K-Means 
 In this case, K-Means will be used for color clustering for football. This is important for us to understand how K-Means can be used for.
 
-##Color Clustering
+## Color Clustering 
+### 1. Defining the libraries and import file
 
 Let's prepare the necessary libraries and
  
@@ -85,6 +87,8 @@ original_image = cv2.imread("C:/Users/… /football.jpg")
 plt.imshow(original_image)
 ```
 ![alt text](pictures/5.football.PNG)
+
+### 2. Connverting RGB to HSV
 
 We need to convert our image from RGB Colours Space to HSV to work ahead.
 Because, according to wikipedia the R, G, and B components of an object’s color in a digital image are all correlated with the amount of light hitting the object, and therefore with each other, image descriptions in terms of those components make object discrimination difficult. Descriptions in terms of hue/lightness/chroma or hue/lightness/saturation are often more relevant.
@@ -102,6 +106,9 @@ Then, We need to convert the unit8 values to float as it is a requirement of the
 ```
 vectorized = np.float32(vectorized)
 ```
+
+### 3. Set Cluster
+
 We will do cluster with k = 6
 Because if you look at the image above it has 6 colors, green-colored grass and dark green, red-team, white-team, red-shadow, white-shadow.
 Define criteria, number of clusters(K) and apply k-means()
@@ -135,6 +142,9 @@ Access the labels to regenerate the clustered image
 res = center[label.flatten()]
 result_image = res.reshape((img.shape))
 ```
+
+### 4. Compare the results
+
 Now, compare the pictures
 ```
 figure_size = 15
