@@ -12,7 +12,7 @@ Purpose:
 |6032028021      |Shakeel Ahmed        			 |shakeelchula20@gmail.com     	|
 |6372084021      |Phing Lim            		 	 |limphing@gmail.com			|
 
-## 1st Step: Import Library
+## 1. Import Library
 The first result was trained by 12 months ( 1st January - 31 December) 2020 infected person information.
 
 ```
@@ -29,7 +29,7 @@ import random
 from sklearn.cluster import KMeans
 import csv
 ```
-## 2nd Step: See Raw Data
+## 2. See Raw Data
 ```
 response = requests.get("https://data.sfgov.org/resource/rkru-6vcg.json")
 print(response.status_code)
@@ -44,20 +44,20 @@ ps
 ```
 ![alt text](pictures/2.table.PNG)
 
-## 3rd Step: Testing Plot Number of passengers by Flight from Feb-Dec 2020 
+## 3. Testing Plot Number of passengers by Flight from Feb-Dec 2020 
 
 Try to get data from API and analyse total number of passenger every month then plotting the graph
 
 ![alt text](pictures/3.graph.PNG)
 
-## 4th Step: K-Mean 
+## 4. K-Mean 
 
 Now, we want to use K-Means to see the data generally. 
 Prepare data set X : Operating Period and Y : Number of Passengers of all Airline in July 2019 until December 2020. 
 
 ![alt text](pictures/4.kmean.PNG)
 
-## 5th Step: Saving Output 
+## 5. Saving Output 
 
 Now, we want to write CSV output file from what we have done.
 Since our data is the panda dataframe, we can use to_cvs to convert output to csv.
@@ -70,7 +70,7 @@ all_pd_data.to_csv('output.zip', index=False, compression = compression_opts)
 
 
 Previously we show the data using K-Means for making us easy to understand the data. We can not see all the data one by one, but using clustering method, we can cluster the data then we can see it clearly. It is essential for helping us to decide what to do.
-## Color Segmentation Using K-Means 
+# Color Segmentation Using K-Means 
 In this case, K-Means will be used for color clustering for football. This is important for us to understand how K-Means can be used for.
 
 ## Color Clustering 
