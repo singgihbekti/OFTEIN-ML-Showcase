@@ -44,28 +44,38 @@ ps
 ![alt text](pictures/2.table.PNG)
 
 ##3rd Step: Testing Plot Number of passengers by Flight from Feb-Dec 2020
+
 Try to get data from API and analyse total number of passenger every month then plotting the graph
+
 ![alt text](pictures/3.graph.PNG)
 
 ##4th Step: K-Mean
+
 Now, we want to use K-Means to see the data generally. 
 Prepare data set X : Operating Period and Y : Number of Passengers of all Airline in July 2019 until December 2020. 
+
 ![alt text](pictures/4.kmean.PNG)
 
 ##5th Step: Saving Output
+
 Now, we want to write CSV output file from what we have done.
 Since our data is the panda dataframe, we can use to_cvs to convert output to csv.
+
 ```
 compression_opts = dict(method='zip', archive_name = 'output.csv')
 all_pd_data.to_csv('output.zip', index=False, compression = compression_opts)
 ```
+![alt text](pictures/8.output.PNG)
+
 
 Previously we show the data using K-Means for making us easy to understand the data. We can not see all the data one by one, but using clustering method, we can cluster the data then we can see it clearly. It is essential for helping us to decide what to do.
 ##Color Segmentation Using K-Means
 In this case, K-Means will be used for color clustering for football. This is important for us to understand how K-Means can be used for.
 
 ##Color Clustering
-Let's prepare the necessary libraries and 
+
+Let's prepare the necessary libraries and
+ 
 ```
 import numpy as np
 import cv2
