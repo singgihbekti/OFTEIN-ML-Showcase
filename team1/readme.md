@@ -93,6 +93,7 @@ img=cv2.cvtColor(original_image,cv2.COLOR_BGR2RGB)
 plt.imshow(img)
 ```
 ![alt text](pictures/6.fb.PNG)
+
 Next, converts the MxNx3 image into a Kx3 matrix where K=MxN and each row is now a vector in the 3-D space of RGB.
 ```
 vectorized = img.reshape((-1,3))
